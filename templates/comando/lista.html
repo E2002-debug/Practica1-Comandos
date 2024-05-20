@@ -1,0 +1,25 @@
+{% extends "template.html" %}
+{% block content %}
+<h2 class="text-white">Lista de Comandos</h2>
+<div class="booking-form-body">
+    
+    <table id="tabla" class="table text-white">
+        <thead>
+            <tr>
+                
+                <th>Comando</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for comando in lista %}
+            <tr>
+                <td>{{ comando }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="/comando/ver" class="btn btn-danger">AGREGAR</a>
+</div>
+{% endblock %}
+
+
